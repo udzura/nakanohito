@@ -20,11 +20,11 @@ class NakanohitoSchedulesTest < ActiveSupport::TestCase
     assert_equal 3, @schedules.size
 
     @first = @schedules[0]
-    assert_equal "Hello, post", @first["text"]
-    assert_equal Time.parse("2014-09-05T12:30:00+0900"), @first["scheduled_at"]
+    assert_equal "Hello, post", @first.text
+    assert_equal Time.parse("2014-09-05T12:30:00+0900"), @first.scheduled_at
 
     @third = @schedules[2]
-    assert_equal "日本語の投稿。", @third["text"]
-    assert_equal Time.parse("2014-09-07T12:30:00+0900"), @third["scheduled_at"]
+    assert_equal "日本語の投稿。", @third.text
+    assert_equal Time.parse("2014-09-07T12:30:00+0900"), @third.scheduled_at
   end
 end

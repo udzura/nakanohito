@@ -1,5 +1,6 @@
 require 'yaml'
 require 'active_support/core_ext/module/delegation'
+require 'hashie/mash'
 
 class Nakanohito::Schedules
   def self.new_from_rails_config
@@ -22,8 +23,14 @@ class Nakanohito::Schedules
              config
            end
 
-    @config = YAML.load(yaml)
+    @config = YAML.load(yaml).map do |schedule|
+      Hashie::Mash.new(schedule).tap do |vo|
+        vo.scheduled_at_in_epoctime = vo.scheduled_at.to_i
+      end
+    end
   end
   attr_accessor :config
-  delegate :[], :[]=, :size, to: :config
+  delegate :[], :[]=, :size, :each, to: :config
+
+  include Enumerable
 end
