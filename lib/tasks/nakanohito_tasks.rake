@@ -1,6 +1,6 @@
 namespace :nakanohito do
-  desc "Load social post schedules from config"
-  task :load do
-
+  desc "Register social post schedules from config"
+  task :register do
+    Nakanohito.register!
   end
 end

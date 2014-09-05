@@ -4,7 +4,7 @@ require 'hashie/mash'
 
 class Nakanohito::Schedules
   def self.new_from_rails_config
-    new(Nakanohito.config.file_path)
+    new(file_path: Nakanohito.config.file_path)
   end
 
   # File format should be:

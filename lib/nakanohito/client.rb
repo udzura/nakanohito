@@ -13,7 +13,9 @@ class Nakanohito::Client
     register_response = []
     schedules.each do |schedule|
       next if already_registered.any? {|plan| plan.scheduled_at == schedule.scheduled_at_in_epoctime }
-      register_response << create_update(schedule.text, schedule.scheduled_at)
+      res = create_update(schedule.text, schedule.scheduled_at)
+      res.original_schedule = schedule
+      register_response << res
     end
     register_response
   end
