@@ -1,4 +1,6 @@
-# desc "Explaining what the task does"
-# task :nakanohito do
-#   # Task goes here
-# end
+namespace :nakanohito do
+  desc "Load social post schedules from config"
+  task :load do
+
+  end
+end

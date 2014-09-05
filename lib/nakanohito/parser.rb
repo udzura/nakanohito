@@ -1,0 +1,2 @@
+class Nakanohito::Parser
+end
