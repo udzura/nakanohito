@@ -1,2 +1,3 @@
 class Nakanohito::Client
+
 end

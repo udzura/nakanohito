@@ -3,7 +3,7 @@ end
 
 require 'nakanohito/version'
 require 'nakanohito/config'
-require 'nakanohito/parser'
+require 'nakanohito/schedules'
 require 'nakanohito/client'
 
 if defined? Rails

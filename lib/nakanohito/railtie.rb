@@ -9,6 +9,10 @@ module Nakanohito
       end
     end
 
+    initializer 'nakanohito.config_set_default' do
+      Nakanohito.config.file_path ||= Rails.root.join("config", "nakanohito.yml")
+    end
+
     rake_tasks do
       load "tasks/nakanohito_tasks.tasks"
     end
