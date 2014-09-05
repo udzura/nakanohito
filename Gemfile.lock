@@ -44,6 +44,8 @@ GEM
       rash
       yajl-ruby
     builder (3.2.2)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     erubis (2.7.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -82,6 +84,7 @@ GEM
     rake (10.3.2)
     rash (0.4.0)
       hashie (~> 2.0.0)
+    safe_yaml (1.0.3)
     sprockets (2.12.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -100,6 +103,9 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    webmock (1.18.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
     yajl-ruby (1.2.1)
 
 PLATFORMS
@@ -108,3 +114,4 @@ PLATFORMS
 DEPENDENCIES
   nakanohito!
   sqlite3
+  webmock

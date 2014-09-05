@@ -1,2 +1,1 @@
-Nakanohito.config.access_token = "Dummy"
-Nakanohito.config.profile_id   = "Dummy"
+Nakanohito.config.access_token = ENV['TEST_TOKEN'] || 'dummy'

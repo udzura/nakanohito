@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency "buff", ">= 0"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "webmock"
 end

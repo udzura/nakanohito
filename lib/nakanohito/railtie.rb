@@ -15,10 +15,6 @@ module Nakanohito
       unless Nakanohito.config.access_token
         raise "Nakanohito.config.access_token should be set in initializer"
       end
-
-      unless Nakanohito.config.profile_id
-        raise "Nakanohito.config.profile_id should be set in initializer"
-      end
     end
   end
 end
